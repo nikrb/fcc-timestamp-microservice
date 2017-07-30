@@ -1,15 +1,15 @@
+'use strict';
 const express = require('express');
 const moment = require( 'moment');
 
 const app = express();
 
-// console.log( `using port [${process.env.PORT}] env [${process.env.NODE_ENV}]`);
-app.set('port', (process.env.PORT || 8081));
+ app.set('port', (process.env.PORT));
 
 app.use('/', express.static(process.cwd() + '/public'));
 
 app.get( '/', (req,res) => {
-  res.sendFile( process.cwd() + '/public/index.html');
+  res.sendFile( process.cwd() + '/views/index.html');
 });
 
 app.get( '/:p', (req,res) => {

@@ -1,1 +1,1 @@
-FCC project Timestamp Microservice.
+FCC project timestamp microservice
